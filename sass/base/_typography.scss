@@ -1,0 +1,26 @@
+body {
+    font: 900 1.4rem 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+
+.title{
+    margin-bottom: 4.5rem;
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 3rem;
+        animation: moveFromLeft 1s ease-out;
+    }
+
+    &--sub{
+        display: block;
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        animation: moveFromRight 1s ease-out;
+        
+    }
+}
