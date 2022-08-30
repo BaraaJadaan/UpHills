@@ -1,0 +1,6 @@
+@mixin overlap {
+            &:hover{
+                border-width: 2rem;
+                z-index: 2;
+            } 
+}

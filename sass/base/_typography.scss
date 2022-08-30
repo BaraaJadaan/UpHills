@@ -8,6 +8,7 @@ body {
     color: white;
     text-transform: uppercase;
     backface-visibility: hidden;
+    cursor:default;
 
     &--main{
         display: block;
@@ -22,5 +23,39 @@ body {
         letter-spacing: 1rem;
         animation: moveFromRight 1s ease-out;
         
+    }
+}
+
+.heading-secondary{
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor:default;
+    transition: all .3s;
+
+    &:hover{
+        transform: skew(1deg);
+        text-shadow: .5rem .7rem .5rem rgba(0, 0, 0, 0.192);
+    }
+}
+
+.col-1{
+    font-size: 1.7rem;
+}
+
+.heading{
+    color: rgb(68, 68, 68);
+    text-transform: uppercase;
+}
+
+.paragraph{
+    color: gray;
+    font-weight:bolder;
+    &:not(:last-child){
+        margin-bottom: 2rem;
     }
 }

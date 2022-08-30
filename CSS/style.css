@@ -50,6 +50,7 @@
 
 html {
   font-size: 62.5%;
+  background-color: #f7f7f7;
 }
 
 body {
@@ -67,6 +68,7 @@ body {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
+  cursor: default;
 }
 .title--main {
   display: block;
@@ -79,6 +81,55 @@ body {
   font-size: 3rem;
   letter-spacing: 1rem;
   animation: moveFromRight 1s ease-out;
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, rgb(255, 72, 0), rgb(255, 208, 0));
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: default;
+  transition: all 0.3s;
+}
+.heading-secondary:hover {
+  transform: skew(1deg);
+  text-shadow: 0.5rem 0.7rem 0.5rem rgba(0, 0, 0, 0.192);
+}
+
+.col-1 {
+  font-size: 1.7rem;
+}
+
+.heading {
+  color: rgb(68, 68, 68);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  color: gray;
+  font-weight: bolder;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem;
 }
 
 .btn:link, .btn:visited {
@@ -129,6 +180,199 @@ body {
   transition: all 0.4s;
 }
 
+.fix {
+  display: inline;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 28%);
+  margin: 8rem;
+  gap: 10rem;
+}
+
+.card {
+  perspective: 80rem;
+  position: relative;
+  height: 47rem;
+  width: 100%;
+}
+.card__side {
+  height: 47rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: white;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, rgb(1, 92, 1), rgb(26, 165, 26));
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom, rgb(255, 72, 0), rgb(255, 208, 0));
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133));
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture {
+  background-size: cover;
+  height: 20rem;
+  background-blend-mode: screen;
+  clip-path: ellipse(90% 100% at top);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.card__picture--1 {
+  background-image: linear-gradient(to right bottom, rgb(1, 109, 1), rgb(2, 172, 2)), url(../Assets/nat-6.jpg);
+}
+.card__picture--2 {
+  background-image: linear-gradient(to right bottom, rgba(255, 72, 0, 0.9), rgba(255, 208, 0, 0.9)), url(../Assets/nat-5.jpg);
+}
+.card__picture--3 {
+  background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133)), url(../Assets/nat-7.jpg);
+}
+.card__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: white;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(1, 92, 1, 0.85), rgba(26, 165, 26, 0.85));
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(255, 72, 0, 0.85), rgba(255, 208, 0, 0.85));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(75, 0, 130, 0.85), rgba(122, 5, 133, 0.85));
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
+}
+.card__cta {
+  position: absolute;
+  left: 28%;
+  top: 22%;
+}
+.card__price-box {
+  color: rgba(255, 255, 255, 0.705);
+}
+.card__price-only {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: 10rem;
+  gap: 5rem;
+}
+
+.col-2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.composition__photo {
+  width: 45%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.527);
+  position: absolute;
+  transition: all 0.4s;
+  outline-offset: 1rem;
+}
+.composition__photo--p1 {
+  top: -2rem;
+  left: 0rem;
+}
+.composition__photo--p2 {
+  top: 1rem;
+  left: 20rem;
+}
+.composition__photo--p3 {
+  top: 8rem;
+  left: 10rem;
+}
+.composition__photo:hover {
+  transform: scale(1.05);
+  outline: 1rem solid orange;
+  z-index: 2;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+.feature-box-container {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  padding-top: 7rem;
+  margin: 18rem;
+  gap: 3rem;
+  position: absolute;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 2rem;
+  height: auto;
+  width: 21rem;
+  background-color: rgba(247, 247, 247, 0.8);
+  transition: all 0.2s;
+}
+.feature-box__icon {
+  padding: 2rem;
+  font-size: 5rem;
+}
+.feature-box:hover {
+  transform: translateY(-2rem);
+}
+
 .header {
   background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.4)), url(../Assets/pexels-pixabay-161172.jpg);
   background-size: cover;
@@ -154,6 +398,24 @@ body {
   top: 40%;
   left: 45%;
   transform: translate(-40%, -40%);
+}
+
+.section-about {
+  padding-top: 15rem;
+}
+
+.section-features {
+  background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.4)), url(../Assets/up2.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: ellipse(80% 90% at bottom);
+  height: 95vh;
+  width: 100%;
+  position: relative;
+}
+
+.section-tours {
+  padding-top: 15rem;
 }
 
 /*# sourceMappingURL=style.css.map */

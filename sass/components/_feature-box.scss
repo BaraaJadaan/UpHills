@@ -1,0 +1,28 @@
+// .section-features{
+//     display: flex;
+//     justify-content: center;
+// }
+
+.feature-box-container{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    padding-top: 7rem;
+    margin:18rem;
+    gap: 3rem;
+    position: absolute;
+}
+.feature-box{
+    text-align: center;
+    padding: 2rem;
+    height: auto;
+    width: 21rem;
+    background-color: rgb($grey1,0.8);
+    transition: all .2s;
+    &__icon{
+        padding: 2rem;
+        font-size: 5rem;
+    }
+    &:hover{
+        transform: translateY(-2rem);
+    }
+}

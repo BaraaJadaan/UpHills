@@ -1,0 +1,18 @@
+.section-about{
+    padding-top: 15rem;
+
+}
+
+.section-features{
+    background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.4)), url(../Assets/up2.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: ellipse(80% 90% at bottom);
+    height: 95vh;
+    width: 100%;
+    position: relative;
+}
+
+.section-tours{
+    padding-top: 15rem;
+}
