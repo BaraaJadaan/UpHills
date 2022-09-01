@@ -5,11 +5,13 @@
 
 .feature-box-container{
     display: grid;
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(4, 23%);
     padding-top: 7rem;
-    margin:18rem;
     gap: 3rem;
     position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 .feature-box{
     text-align: center;

@@ -70,17 +70,17 @@
         
         &--1 {
             background-image: linear-gradient(to right bottom, rgb(1, 109, 1), rgb(2, 172, 2)), 
-            url(../Assets/nat-6.jpg);
+            url(../Assets/images/nat-6.jpg);
         }
     
         &--2 {
             background-image: linear-gradient(to right bottom, rgb($primary, 0.9), rgb($secondary, 0.9)), 
-            url(../Assets/nat-5.jpg);
+            url(../Assets/images/nat-5.jpg);
         }
     
         &--3 {
             background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133)), 
-            url(../Assets/nat-7.jpg);
+            url(../Assets/images/nat-7.jpg);
         }
     }
     &__heading {
@@ -145,8 +145,9 @@
         // align-items: center;
         // flex-direction: column;
         position: absolute;
-        left: 28%;
-        top: 22%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__price-box{

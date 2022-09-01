@@ -4,7 +4,7 @@
 }
 
 .section-features{
-    background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.4)), url(../Assets/up2.jpg);
+    background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.4)), url(../Assets/images/up2.jpg);
     background-size: cover;
     background-position: center;
     clip-path: ellipse(80% 90% at bottom);
@@ -14,5 +14,10 @@
 }
 
 .section-tours{
-    padding-top: 15rem;
+    padding-top: 13rem;
+}
+
+.section-stories{
+    position: relative;
+    padding-top: 10rem;
 }
