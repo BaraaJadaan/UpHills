@@ -1,5 +1,5 @@
 .header{
-    background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.4)), url(../Assets/images/hero.JPG);
+    background-image: linear-gradient(to right, rgba($primary, 0.5), rgba($secondary, 0.4)), url(../Assets/images/hero.jpg);
     background-size: cover;
     background-position: center;
     /* clip-path: polygon(0 50%, 100% 0, 100% 100%); */
@@ -11,12 +11,13 @@
 
     &__logo-box{
         position: absolute;
-        top: 2rem;
-        left: 2rem;
+        top: 0rem;
+        left: -4rem;
     }
 
     &__logo{
-        height: 8rem;
+        height: 12rem;
+        // filter: invert(51%) sepia(91%) saturate(2322%) hue-rotate(356deg) brightness(103%) contrast(103%);
     }
 
     &__text-box{

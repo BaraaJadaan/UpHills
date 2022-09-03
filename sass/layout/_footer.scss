@@ -10,9 +10,9 @@
     }
 
     &__logo {
-        width: 10rem;
+        width: 25rem;
         height: auto;
-        // background-color: aqua;
+        filter: invert(51%) sepia(91%) saturate(2322%) hue-rotate(356deg) brightness(103%) contrast(103%);
     }
 
     &__navigation {

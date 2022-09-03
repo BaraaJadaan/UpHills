@@ -70,17 +70,17 @@
         
         &--1 {
             background-image: linear-gradient(to right bottom, rgb(1, 109, 1), rgb(2, 172, 2)), 
-            url(../Assets/images/nat-6.JPG);
+            url(../Assets/images/nat-6.jpg);
         }
     
         &--2 {
             background-image: linear-gradient(to right bottom, rgb($primary, 0.9), rgb($secondary, 0.9)), 
-            url(../Assets/images/nat-5.JPG);
+            url(../Assets/images/nat-5.jpg);
         }
     
         &--3 {
             background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133)), 
-            url(../Assets/images/nat-7.JPG);
+            url(../Assets/images/nat-7.jpg);
         }
     }
     &__heading {
