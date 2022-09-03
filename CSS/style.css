@@ -606,6 +606,7 @@ body {
 }
 .header__logo {
   height: 12rem;
+  filter: brightness(0);
 }
 .header__text-box {
   text-align: center;
@@ -645,7 +646,7 @@ body {
 }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../../Assets/images/up1.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../Assets/images/up1.jpg);
   margin: 10rem;
   background-size: 100%;
   border-radius: 3px;
