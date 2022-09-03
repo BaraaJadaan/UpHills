@@ -265,13 +265,13 @@ body {
   border-top-right-radius: 3px;
 }
 .card__picture--1 {
-  background-image: linear-gradient(to right bottom, rgb(1, 109, 1), rgb(2, 172, 2)), url(../Assets/images/nat-6.JPG);
+  background-image: linear-gradient(to right bottom, rgb(1, 109, 1), rgb(2, 172, 2)), url(../Assets/images/nat-6.jpg);
 }
 .card__picture--2 {
-  background-image: linear-gradient(to right bottom, rgba(255, 72, 0, 0.9), rgba(255, 208, 0, 0.9)), url(../Assets/images/nat-5.JPG);
+  background-image: linear-gradient(to right bottom, rgba(255, 72, 0, 0.9), rgba(255, 208, 0, 0.9)), url(../Assets/images/nat-5.jpg);
 }
 .card__picture--3 {
-  background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133)), url(../Assets/images/nat-7.JPG);
+  background-image: linear-gradient(to right bottom, indigo, rgb(122, 5, 133)), url(../Assets/images/nat-7.jpg);
 }
 .card__heading {
   font-size: 2.8rem;
@@ -588,7 +588,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.4)), url(../Assets/images/hero.JPG);
+  background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.4)), url(../Assets/images/hero.jpg);
   background-size: cover;
   background-position: center;
   /* clip-path: polygon(0 50%, 100% 0, 100% 100%); */
