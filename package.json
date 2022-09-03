@@ -4,7 +4,7 @@
   "description": "Landing page for Uphills",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass sass/main.scss CSS/style.css -w"
   },
   "repository": {
     "type": "git",
