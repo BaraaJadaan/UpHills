@@ -33,14 +33,14 @@
                                     rgba(white, .7) 0%,
                                     rgba(white, .7) 50%,
                                     transparent 50%) ,
-                            url(../../Assets/images/up1.jpg);
-    margin: 10rem; 
+                            url(../Assets/images/up1.jpg);
+    margin: 8rem; 
     background-size: 100%;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 1.5rem 4rem rgba(black, .2);
-    padding-bottom: 4rem;
+    // padding-bottom: rem;
     &__form {
-        width: 55%;
+        width: 50%;
         padding: 8rem;
     }
 }

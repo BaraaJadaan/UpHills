@@ -1,7 +1,3 @@
-.fix{
-    display: inline
-}
-
 .card-grid{
     display: grid;
     grid-template-columns: repeat(3, 28%);
@@ -10,9 +6,8 @@
 }
 
 .card {
-
     // FUNCTIONALITY
-    perspective: 80rem;
+    perspective: 100rem;
     position: relative;
     height: 47rem;
     width: 100%;
@@ -21,8 +16,6 @@
         height: 47rem;
         transition: all .8s ease;
         position: absolute;
-        // top: 0;
-        // left: 0;
         width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -90,14 +83,15 @@
         text-align: right;
         color: white;
         position: absolute;
-        top: 12rem;
-        right: 2rem;
+        top: 15rem;
+        right: 1rem;
         width: 75%;
     
     }
 
     &__heading-span {
-        padding: 1rem 1.5rem;
+        
+        padding: .7rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
@@ -130,8 +124,8 @@
 
             li {
                 text-align: center;
-                font-size: 1.5rem;
-                padding: 1rem;
+                font-size: 1.7rem;
+                padding: 1.5rem;
 
                 &:not(:last-child) {
                     border-bottom: 1px solid $grey1;
@@ -168,4 +162,8 @@
 
     }
 
+}
+
+.card-scaled{
+    transform: scale(1.1);
 }
