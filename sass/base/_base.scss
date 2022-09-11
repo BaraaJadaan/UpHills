@@ -9,15 +9,37 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit; 
+    // @include respond(big-desktop) {
+    //     padding: 1rem;
+    // }
 }
 
 html {
-    //This defines what 1rem is 
-    font-size: 62.5%;
-    background-color: $grey1;
-    cursor: default;
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(big-big-desktop) {
+        font-size: 93.75%; //1rem = 15, 15/16
+    }   
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+    
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(phone) { // width < 600?
+        font-size: 46.875%; //1 rem = 7.5px, 7.5/16 = 50%
+    }
+    
+    
 }
-  
+
 body {
     box-sizing: border-box;
     font-size: 1.6rem;

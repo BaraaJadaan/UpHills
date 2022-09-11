@@ -8,21 +8,27 @@ body {
     color: white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    cursor:default;
-
+    
     &--main{
         display: block;
         font-size: 6rem;
         letter-spacing: 3rem;
+        text-align: center;
         animation: moveFromLeft 1s ease-out;
+        @include respond(phone) {
+            letter-spacing: 2rem;
+        }
     }
 
     &--sub{
         display: block;
         font-size: 3rem;
         letter-spacing: 1rem;
+        text-align: center;
         animation: moveFromRight 1s ease-out;
-        
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -51,6 +57,7 @@ body {
     text-transform: uppercase;
     font-size: 1.8rem;
     letter-spacing: .1rem;
+    
 }
 
 .paragraph{

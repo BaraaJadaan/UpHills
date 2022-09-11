@@ -8,6 +8,13 @@
     padding-left: 7rem;
     font-size: 1.4rem;
     transform: skewX(-12deg);
+    @include respond(tab-small) {
+        width: 70%;
+    }
+    @include respond(phone) {
+        transform: skewX(-7deg);
+        width: 90%;
+    }
 
     &__shape {
         width: 12rem;
@@ -18,7 +25,9 @@
         position: relative;
         overflow: hidden;
         border-radius: 50%;
-        
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(7deg);
+        }
     }
 
     &__img {
@@ -26,12 +35,15 @@
         transform: translateX(-3rem) scale(1.2);
         backface-visibility: hidden;
         transition: all .5s;
+        
     }
 
     &__text {
         transform: skewX(12deg);
         backface-visibility: hidden;
-
+        @include respond(phone) {
+            transform: skewX(7deg);
+        }
 
     }
 

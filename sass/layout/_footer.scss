@@ -6,7 +6,7 @@
 
     &__logo-box {
         text-align: center;
-        margin-top: 6rem;
+        // margin-top: 2rem;
     }
 
     &__logo {
@@ -49,15 +49,7 @@
             color: $primary;
             background-color: rgb(37, 37, 37);
             box-shadow: 0 1rem 2rem rgba(black, .4);
-            transform: rotate(5deg) scale(1.3);
+            transform: scale(1.1);
         }
-    }
-
-    &__copyright {
-        border-top: 1px solid grey;
-        padding-top: 2rem;
-        margin-left: 8rem;
-        width: 80%;
-
     }
 }

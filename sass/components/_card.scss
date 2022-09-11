@@ -1,8 +1,17 @@
 .card-grid{
     display: grid;
-    grid-template-columns: repeat(3, 28%);
+    grid-template-columns: repeat(3, 33.33%);
     margin:8rem;
-    gap: 10rem;
+    gap: 5rem;
+    justify-content:center;
+    align-items: center;
+    @include respond(tab-small) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        margin:8rem 10rem;
+        gap: 3rem;
+        
+    }
 }
 
 .card {
@@ -10,8 +19,10 @@
     perspective: 100rem;
     position: relative;
     height: 47rem;
-    width: 100%;
-
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     &__side {
         height: 47rem;
         transition: all .8s ease;
@@ -128,7 +139,7 @@
                 padding: 1.5rem;
 
                 &:not(:last-child) {
-                    border-bottom: 1px solid $grey1;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
                 }
             }
         }
@@ -162,8 +173,4 @@
 
     }
 
-}
-
-.card-scaled{
-    transform: scale(1.1);
 }

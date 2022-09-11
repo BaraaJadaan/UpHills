@@ -3,9 +3,21 @@
     grid-template-columns: repeat(2, 50%);
     margin:10rem;
     gap: 5rem;
-    
+    padding-bottom: 12rem;
+    @include respond(tab-port) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        padding-bottom: 35rem;
+        gap: 10rem;
+        margin:5rem;
+    }
+    @include respond(big-desktop) {
+        padding-bottom: 20rem;
+    }
 }
-
+.col-1{
+    text-align: center;
+}
 .col-2{
     display: flex;
     align-items: center;
@@ -14,11 +26,20 @@
 
 .composition{
     &__photo{
-        width: 45%;
+        width: 50%;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.527);
         position:absolute;
         transition: all .4s;
         outline-offset: 1rem;
+        @include respond(tab-port) {
+            transform: translateX(60%);
+            text-align: center;
+            width: 35%;
+        }
+        @include respond(phone) {
+            transform: translateX(15%);
+            width: 45%;
+        }
         &--p1{
             top:-2rem;
             left: 0rem;
@@ -37,10 +58,17 @@
             transform: scale(1.05);
             outline: 1rem solid orange;
             z-index: 2;
+            @include respond(phone) {
+                transform: translateX(15%) scale(1.05);
+            }
         } 
         
     }
     &:hover &__photo:not(:hover){
         transform: scale(.95);
+        @include respond(phone) {
+            transform: translateX(15%) scale(.95);
+
+        }
     }
 }

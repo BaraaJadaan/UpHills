@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -50,8 +67,31 @@
 
 html {
   font-size: 62.5%;
-  background-color: #f7f7f7;
-  cursor: default;
+}
+@media only screen and (min-width: 150em) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 46.875%;
+  }
 }
 
 body {
@@ -69,19 +109,30 @@ body {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  cursor: default;
 }
 .title--main {
   display: block;
   font-size: 6rem;
   letter-spacing: 3rem;
+  text-align: center;
   animation: moveFromLeft 1s ease-out;
+}
+@media only screen and (max-width: 37.5em) {
+  .title--main {
+    letter-spacing: 2rem;
+  }
 }
 .title--sub {
   display: block;
   font-size: 3rem;
   letter-spacing: 1rem;
+  text-align: center;
   animation: moveFromRight 1s ease-out;
+}
+@media only screen and (max-width: 37.5em) {
+  .title--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -209,16 +260,29 @@ body {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 28%);
+  grid-template-columns: repeat(3, 33.33%);
   margin: 8rem;
-  gap: 10rem;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 50em) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    margin: 8rem 10rem;
+    gap: 3rem;
+  }
 }
 
 .card {
   perspective: 100rem;
   position: relative;
   height: 47rem;
-  width: 100%;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card__side {
   height: 47rem;
@@ -308,7 +372,7 @@ body {
   padding: 1.5rem;
 }
 .card__details ul li:not(:last-child) {
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
 .card__cta {
   position: absolute;
@@ -331,15 +395,30 @@ body {
   padding-bottom: 8rem;
 }
 
-.card-scaled {
-  transform: scale(1.1);
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   margin: 10rem;
   gap: 5rem;
+  padding-bottom: 12rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    padding-bottom: 35rem;
+    gap: 10rem;
+    margin: 5rem;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .about-grid {
+    padding-bottom: 20rem;
+  }
+}
+
+.col-1 {
+  text-align: center;
 }
 
 .col-2 {
@@ -349,11 +428,24 @@ body {
 }
 
 .composition__photo {
-  width: 45%;
+  width: 50%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.527);
   position: absolute;
   transition: all 0.4s;
   outline-offset: 1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .composition__photo {
+    transform: translateX(60%);
+    text-align: center;
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .composition__photo {
+    transform: translateX(15%);
+    width: 45%;
+  }
 }
 .composition__photo--p1 {
   top: -2rem;
@@ -372,8 +464,18 @@ body {
   outline: 1rem solid orange;
   z-index: 2;
 }
+@media only screen and (max-width: 37.5em) {
+  .composition__photo:hover {
+    transform: translateX(15%) scale(1.05);
+  }
+}
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.95);
+}
+@media only screen and (max-width: 37.5em) {
+  .composition:hover .composition__photo:not(:hover) {
+    transform: translateX(15%) scale(0.95);
+  }
 }
 
 .feature-box-container {
@@ -385,6 +487,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  justify-content: center;
+}
+@media only screen and (max-width: 50em) {
+  .feature-box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .feature-box {
@@ -395,9 +506,20 @@ body {
   background-color: rgba(247, 247, 247, 0.8);
   transition: all 0.2s;
 }
+@media only screen and (max-width: 50em) {
+  .feature-box {
+    width: 40rem;
+    padding: 1rem;
+  }
+}
 .feature-box__icon {
   padding: 2rem;
   font-size: 5rem;
+}
+@media only screen and (max-width: 50em) {
+  .feature-box__icon {
+    padding: 1rem;
+  }
 }
 .feature-box:hover {
   transform: translateY(-2rem);
@@ -485,6 +607,35 @@ body {
   opacity: 1;
 }
 
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 55%, transparent 55%), url(../Assets/images/up1.jpg);
+  margin: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%), url(../Assets/images/up1.jpg);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .book {
+    margin: 2rem;
+  }
+}
+.book__form {
+  width: 55%;
+  padding: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .book__form {
+    padding-right: 3rem;
+    width: 100%;
+  }
+}
+
 .story {
   width: 55%;
   margin: 5rem auto;
@@ -496,6 +647,17 @@ body {
   font-size: 1.4rem;
   transform: skewX(-12deg);
 }
+@media only screen and (max-width: 50em) {
+  .story {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .story {
+    transform: skewX(-7deg);
+    width: 90%;
+  }
+}
 .story__shape {
   width: 12rem;
   height: 12rem;
@@ -506,6 +668,11 @@ body {
   overflow: hidden;
   border-radius: 50%;
 }
+@media only screen and (max-width: 37.5em) {
+  .story__shape {
+    transform: translateX(-3rem) skewX(7deg);
+  }
+}
 .story__img {
   height: 100%;
   transform: translateX(-3rem) scale(1.2);
@@ -515,6 +682,11 @@ body {
 .story__text {
   transform: skewX(12deg);
   backface-visibility: hidden;
+}
+@media only screen and (max-width: 37.5em) {
+  .story__text {
+    transform: skewX(7deg);
+  }
 }
 .story__caption {
   position: absolute;
@@ -546,7 +718,6 @@ body {
 }
 .footer__logo-box {
   text-align: center;
-  margin-top: 6rem;
 }
 .footer__logo {
   width: 25rem;
@@ -579,13 +750,7 @@ body {
   color: rgb(255, 72, 0);
   background-color: rgb(37, 37, 37);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  transform: rotate(5deg) scale(1.3);
-}
-.footer__copyright {
-  border-top: 1px solid grey;
-  padding-top: 2rem;
-  margin-left: 8rem;
-  width: 80%;
+  transform: scale(1.1);
 }
 
 .header {
@@ -598,6 +763,21 @@ body {
   height: 95vh;
   width: 100%;
   position: relative;
+}
+@media only screen and (min-width: 112.5em) {
+  .header {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .header {
+    clip-path: ellipse(150% 100% at top);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    height: 87vh;
+  }
 }
 .header__logo-box {
   position: absolute;
@@ -624,14 +804,26 @@ body {
   background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.4)), url(../Assets/images/up2.jpg);
   background-size: cover;
   background-position: center;
-  clip-path: ellipse(80% 90% at bottom);
+  clip-path: ellipse(80% 100% at bottom);
   height: 95vh;
   width: 100%;
   position: relative;
 }
+@media only screen and (min-width: 112.5em) {
+  .section-features {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .section-features {
+    clip-path: ellipse(150% 100% at bottom);
+    height: 70vh;
+  }
+}
 
 .section-tours {
   padding-top: 13rem;
+  position: relative;
 }
 
 .section-stories {
@@ -643,18 +835,6 @@ body {
   padding: 15rem 0;
   margin-top: 10rem;
   background-image: linear-gradient(to right, rgba(255, 72, 0, 0.5), rgba(255, 208, 0, 0.5));
-}
-
-.book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../Assets/images/up1.jpg);
-  margin: 8rem;
-  background-size: 100%;
-  border-radius: 10px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-}
-.book__form {
-  width: 50%;
-  padding: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

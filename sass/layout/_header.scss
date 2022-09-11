@@ -8,7 +8,16 @@
     height: 95vh;
     width: 100%;
     position: relative;
-
+    @include respond(big-desktop) {
+        height: 80vh;
+    }
+    @include respond(tab-port) {
+        clip-path: ellipse(150% 100% at top);
+    }
+    @include respond(phone) {
+        height: 87vh;
+    }
+    
     &__logo-box{
         position: absolute;
         top: 0rem;
