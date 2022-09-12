@@ -48,6 +48,10 @@
         &--p2{  
             top: 1rem;
             left:20rem;
+            @include respond(small-phone) {
+                top: 0rem;
+                left:18rem;
+            }
         }
 
         &--p3{

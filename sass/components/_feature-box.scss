@@ -8,8 +8,7 @@
     @include respond(tab-small) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-        gap: 2rem;
-        padding-bottom: 5rem;
+        padding: 10rem 0;
     }
 }
 .feature-box{
